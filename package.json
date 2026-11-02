@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "node --require ./tests/register.cjs --test tests/*.test.cjs",
+    "test:watch": "node --require ./tests/register.cjs --test --watch tests/*.test.cjs"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.28.0",
